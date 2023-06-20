@@ -1,0 +1,4 @@
+3
+pencil 1.00
+eraser 1.00
+notebook 2.00
