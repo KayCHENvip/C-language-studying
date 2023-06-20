@@ -306,7 +306,7 @@ void mainMenu() {
 
 
 void loadProductQuantities() {
-    FILE* quantitiesFile = fopen("E:\\Files\\vscproject\\3\\quantities.txt", "r");
+    FILE* quantitiesFile = fopen("quantities.txt", "r");
     if (quantitiesFile != NULL) {
         for (int i = 0; i < productCount; i++) {
             fscanf(quantitiesFile, "%d", &products[i].quantity);
@@ -316,7 +316,7 @@ void loadProductQuantities() {
 }
 
 void saveProductQuantities() {
-    FILE* quantitiesFile = fopen("E:\\Files\\vscproject\\3\\quantities.txt", "w");
+    FILE* quantitiesFile = fopen("quantities.txt", "w");
     if (quantitiesFile != NULL) {
         for (int i = 0; i < productCount; i++) {
             fprintf(quantitiesFile, "%d\n", products[i].quantity);
@@ -328,8 +328,8 @@ void saveProductQuantities() {
 
 int main() {
     // 从文件中加载用户数据和商品数据
-    FILE* usersFile = fopen("E:\\Files\\vscproject\\3\\users.txt", "r");
-    FILE* productsFile = fopen("E:\\Files\\vscproject\\3\\products.txt", "r");
+    FILE* usersFile = fopen("users.txt", "r");
+    FILE* productsFile = fopen("products.txt", "r");
     
     if (usersFile != NULL && productsFile != NULL) {
         // 读取用户数据
@@ -355,8 +355,8 @@ int main() {
     mainMenu();
     
     // 将用户数据和商品数据保存到文件
-    usersFile = fopen("E:\\Files\\vscproject\\3\\users.txt", "w");
-    productsFile = fopen("E:\\Files\\vscproject\\3\\products.txt", "w");
+    usersFile = fopen("users.txt", "w");
+    productsFile = fopen("products.txt", "w");
     
     if (usersFile != NULL && productsFile != NULL) {
         // 保存用户数据
